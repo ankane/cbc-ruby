@@ -52,7 +52,7 @@ Solve
 model.solve
 ```
 
-Write the problem to an LP or MPS file (LP requires Cbc 2.10.0+)
+Write the problem to an LP or MPS file (LP requires Cbc 2.10+)
 
 ```ruby
 model.write_lp("hello.lp")
@@ -60,7 +60,7 @@ model.write_lp("hello.lp")
 model.write_mps("hello") # adds mps.gz
 ```
 
-Read a problem from an LP or MPS file (LP requires Cbc 2.10.0+)
+Read a problem from an LP or MPS file (LP requires Cbc 2.10+)
 
 ```ruby
 model = Cbc.read_lp("hello.lp")
@@ -70,13 +70,13 @@ model = Cbc.read_mps("hello.mps.gz")
 
 ## Reference
 
-Set the log level (requires Cbc 2.10.0+)
+Set the log level (requires Cbc 2.10+)
 
 ```ruby
 model.solve(log_level: 1) # 0 = off, 3 = max
 ```
 
-Set the time limit in seconds (requires Cbc 2.10.0+)
+Set the time limit in seconds (requires Cbc 2.10+)
 
 ```ruby
 model.solve(time_limit: 30)
