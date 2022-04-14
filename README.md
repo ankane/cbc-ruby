@@ -57,7 +57,7 @@ Write the problem to an LP or MPS file (LP requires Cbc 2.10+)
 ```ruby
 model.write_lp("hello.lp")
 # or
-model.write_mps("hello") # adds mps.gz
+model.write_mps("hello") # adds .mps.gz
 ```
 
 Read a problem from an LP or MPS file (LP requires Cbc 2.10+)
