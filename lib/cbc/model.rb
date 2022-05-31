@@ -73,7 +73,7 @@ module Cbc
           if FFI.Cbc_isInitialSolveProvenOptimal(model) != 0
             :optimal
           elsif FFI.Cbc_isInitialSolveProvenPrimalInfeasible(model) != 0
-            :infeasible
+            :primal_infeasible
           else
             secondary_status
           end
