@@ -69,10 +69,18 @@ module Cbc
 
       ret_status =
         case status
-        when :not_started, :finished
-          if FFI.Cbc_isProvenOptimal(model)
+        when :not_started
+          if FFI.Cbc_isInitialSolveProvenOptimal(model) != 0
             :optimal
-          elsif FFI.Cbc_isProvenInfeasible(model)
+          elsif FFI.Cbc_isInitialSolveProvenPrimalInfeasible(model) != 0
+            :infeasible
+          else
+            secondary_status
+          end
+        when :finished
+          if FFI.Cbc_isProvenOptimal(model) != 0
+            :optimal
+          elsif FFI.Cbc_isProvenInfeasible(model) != 0
             :infeasible
           else
             secondary_status
