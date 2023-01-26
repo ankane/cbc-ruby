@@ -2,7 +2,7 @@
 
 [Cbc](https://github.com/coin-or/Cbc) - the mixed-integer programming solver - for Ruby
 
-:fire: Check out [Opt](https://github.com/ankane/opt) for a high-level interface
+Check out [Opt](https://github.com/ankane/opt) for a high-level interface
 
 [![Build Status](https://github.com/ankane/cbc-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/cbc-ruby/actions)
 
