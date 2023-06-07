@@ -95,6 +95,12 @@ class CbcTest < Minitest::Test
     assert_equal :stopped_time, res[:status]
   end
 
+  def test_copy
+    model = Cbc.read_lp("test/support/test.lp")
+    model.dup
+    model.clone
+  end
+
   private
 
   def below210?
