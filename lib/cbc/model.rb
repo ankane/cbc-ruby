@@ -2,7 +2,7 @@ module Cbc
   class Model
     def initialize
       @model = FFI.Cbc_newModel
-      ObjectSpace.define_finalizer(@model, self.class.finalize(@model.to_i))
+      @model.free = FFI["Cbc_deleteModel"]
 
       @below210 = Gem::Version.new(Cbc.lib_version) < Gem::Version.new("2.10.0")
       FFI.Cbc_setLogLevel(model, 0) unless @below210
@@ -94,11 +94,6 @@ module Cbc
         objective: FFI.Cbc_getObjValue(model),
         primal_col: read_double_array(FFI.Cbc_getColSolution(model), num_cols)
       }
-    end
-
-    def self.finalize(addr)
-      # must use proc instead of stabby lambda
-      proc { FFI.Cbc_deleteModel(addr) }
     end
 
     private
