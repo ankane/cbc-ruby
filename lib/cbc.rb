@@ -2,8 +2,8 @@
 require "fiddle/import"
 
 # modules
-require "cbc/model"
-require "cbc/version"
+require_relative "cbc/model"
+require_relative "cbc/version"
 
 module Cbc
   class Error < StandardError; end
