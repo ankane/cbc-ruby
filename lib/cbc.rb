@@ -16,7 +16,11 @@ module Cbc
       # TODO test
       ["CbcSolver.dll"]
     elsif RbConfig::CONFIG["host_os"] =~ /darwin/i
-      ["libCbcSolver.dylib"]
+      if RbConfig::CONFIG["host_cpu"] =~ /arm|aarch64/i
+        ["libCbcSolver.dylib", "/opt/homebrew/lib/libCbcSolver.dylib"]
+      else
+        ["libCbcSolver.dylib"]
+      end
     else
       # coinor-libcbc-dev has libCbcSolver.so
       # coinor-libcbc3 has libCbcSolver.so.3
