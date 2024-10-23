@@ -17,7 +17,7 @@ brew install cbc
 And for Ubuntu, use:
 
 ```sh
-sudo apt-get install coinor-libcbc3
+sudo apt-get install coinor-libcbc3.1 # or coinor-libcbc3
 ```
 
 Then add this line to your application’s Gemfile:

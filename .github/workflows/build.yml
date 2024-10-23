@@ -19,7 +19,9 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-      - if: ${{ startsWith(matrix.os, 'ubuntu') }}
+      - if: ${{ matrix.os == 'ubuntu-24.04' }}
+        run: sudo apt-get update && sudo apt-get install coinor-libcbc3.1
+      - if: ${{ matrix.os == 'ubuntu-20.04' }}
         run: sudo apt-get update && sudo apt-get install coinor-libcbc3
       - if: ${{ startsWith(matrix.os, 'macos') }}
         run: brew install cbc
