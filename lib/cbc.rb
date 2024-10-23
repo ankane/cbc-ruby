@@ -23,8 +23,9 @@ module Cbc
       end
     else
       # coinor-libcbc-dev has libCbcSolver.so
+      # coinor-libcbc3.1 has libCbcSolver.so.3.1
       # coinor-libcbc3 has libCbcSolver.so.3
-      ["libCbcSolver.so", "libCbcSolver.so.3"]
+      ["libCbcSolver.so", "libCbcSolver.so.3.1", "libCbcSolver.so.3"]
     end
   self.ffi_lib = lib_name
 
