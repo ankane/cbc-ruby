@@ -1,4 +1,4 @@
-## 0.2.0 (unreleased)
+## 0.2.0 (2024-10-22)
 
 - Added support for `coinor-libcbc3.1` package
 - Dropped support for Ruby < 3.1
