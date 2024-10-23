@@ -1,5 +1,6 @@
 ## 0.2.0 (unreleased)
 
+- Added support for `coinor-libcbc3.1` package
 - Dropped support for Ruby < 3.1
 
 ## 0.1.2 (2023-06-07)
