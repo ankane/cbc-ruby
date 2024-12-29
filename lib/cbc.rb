@@ -19,7 +19,7 @@ module Cbc
       if RbConfig::CONFIG["host_cpu"] =~ /arm|aarch64/i
         ["libCbcSolver.dylib", "/opt/homebrew/lib/libCbcSolver.dylib"]
       else
-        ["libCbcSolver.dylib"]
+        ["libCbcSolver.dylib", "/usr/local/lib/libCbcSolver.dylib"]
       end
     else
       # coinor-libcbc-dev has libCbcSolver.so

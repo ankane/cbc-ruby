@@ -1,3 +1,7 @@
+## 0.2.1 (unreleased)
+
+- Fixed shared library detection on Mac x86-64
+
 ## 0.2.0 (2024-10-22)
 
 - Added support for `coinor-libcbc3.1` package
