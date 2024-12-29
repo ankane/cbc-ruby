@@ -1,6 +1,7 @@
 ## 0.2.1 (unreleased)
 
 - Fixed shared library detection on Mac x86-64
+- Fixed warning with Ruby 3.4
 
 ## 0.2.0 (2024-10-22)
 
