@@ -40,20 +40,20 @@ module Cbc
 
     def read_lp(filename)
       check_version
-      check_status FFI.Cbc_readLp(model, filename)
+      check_status FFI.Cbc_readLp(model, +filename)
     end
 
     def read_mps(filename)
-      check_status FFI.Cbc_readMps(model, filename)
+      check_status FFI.Cbc_readMps(model, +filename)
     end
 
     def write_lp(filename)
       check_version
-      FFI.Cbc_writeLp(model, filename)
+      FFI.Cbc_writeLp(model, +filename)
     end
 
     def write_mps(filename)
-      FFI.Cbc_writeMps(model, filename)
+      FFI.Cbc_writeMps(model, +filename)
     end
 
     def solve(log_level: nil, time_limit: nil)
